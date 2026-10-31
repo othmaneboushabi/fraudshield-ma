@@ -23,7 +23,6 @@ graph LR
     B -->|Spark Streaming| C(Silver: Nettoyage & Features)
     C -->|XGBoost & MLflow| D(Gold: Scoring & Alertes)
     D -->|Delta Lake / MinIO| E[Streamlit Dashboard]
-
     Ingestion : Redpanda (compatible Kafka) pour le streaming de transactions.
 
 Stockage & Lakehouse : MinIO (S3 compatible) structuré en couches Bronze, Silver et Gold au format Delta Lake.
